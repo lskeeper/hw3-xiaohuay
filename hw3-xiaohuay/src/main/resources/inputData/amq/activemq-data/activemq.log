@@ -1,0 +1,13 @@
+2013-10-02 23:22:05,192 [main           ] INFO  BrokerService                  - Using Persistence Adapter: MemoryPersistenceAdapter
+2013-10-02 23:22:05,194 [main           ] INFO  BrokerService                  - ActiveMQ 5.4.1 JMS Message Broker (localhost) is starting
+2013-10-02 23:22:05,194 [main           ] INFO  BrokerService                  - For help or more information please see: http://activemq.apache.org/
+2013-10-02 23:22:05,214 [JMX connector  ] INFO  ManagementContext              - JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+2013-10-02 23:22:05,347 [main           ] INFO  TransportServerThreadSupport   - Listening for connections at: tcp://cmu-850951.wv.cc.cmu.edu:61616
+2013-10-02 23:22:05,347 [main           ] INFO  TransportConnector             - Connector openwire Started
+2013-10-02 23:22:05,349 [main           ] INFO  BrokerService                  - ActiveMQ JMS Message Broker (localhost, ID:cmu-850951.wv.cc.cmu.edu-51634-1380770525206-0:0) started
+2013-10-02 23:22:59,806 [Thread-4       ] INFO  BrokerService                  - ActiveMQ Message Broker (localhost, ID:cmu-850951.wv.cc.cmu.edu-51634-1380770525206-0:0) is shutting down
+2013-10-02 23:22:59,806 [MQ ShutdownHook] INFO  BrokerService                  - ActiveMQ Message Broker (localhost, ID:cmu-850951.wv.cc.cmu.edu-51634-1380770525206-0:0) is shutting down
+2013-10-02 23:22:59,808 [Thread-4       ] INFO  TransportConnector             - Connector openwire Stopped
+2013-10-02 23:22:59,823 [Thread-4       ] INFO  BrokerService                  - ActiveMQ JMS Message Broker (localhost, ID:cmu-850951.wv.cc.cmu.edu-51634-1380770525206-0:0) stopped
+2013-10-02 23:23:01,370 [MQ ShutdownHook] INFO  TransportConnector             - Connector openwire Stopped
+2013-10-02 23:23:01,371 [MQ ShutdownHook] INFO  BrokerService                  - ActiveMQ JMS Message Broker (localhost, ID:cmu-850951.wv.cc.cmu.edu-51634-1380770525206-0:0) stopped
