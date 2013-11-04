@@ -2,7 +2,9 @@ package hw3.annotators;
 
 import hw3.util.UimaConvenience;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,5 +61,29 @@ public class TokenAndSentenceAnnotator extends JCasAnnotator_ImplBase {
       token.setCasProcessorId(this.getClass().getName());
       token.addToIndexes();
     }
+  }
+  
+  /**
+   * Get the (term, frequency) map for the give annotation
+   * 
+   * @param annotation
+   * @param clazz
+   * @return The (term, frequency) map for the give annotation
+   */
+  private <A extends Annotation, T extends Annotation> Map<String, Integer> getCoveredTypeCounts(
+          A annotation, Class<T> clazz) {
+    Map<String, Integer> typeCountMap = new HashMap<String, Integer>();
+    for (T token : JCasUtil.selectCovered(clazz, annotation)) {
+      String tokenString = token.getCoveredText();
+      if (Pattern.matches("\\p{Punct}", tokenString)) {
+        continue;
+      }
+      if (typeCountMap.containsKey(tokenString)) {
+        typeCountMap.put(tokenString, typeCountMap.get(tokenString) + 1);
+      } else {
+        typeCountMap.put(tokenString, 1);
+      }
+    }
+    return typeCountMap;
   }
 }
